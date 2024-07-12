@@ -1,6 +1,6 @@
 # Configure TypingDNA-based adaptive Authentication
 
-[Typing DNA](https://www.typingdna.com/) uses AI-based technology to identify users according to the way they type.
+[Typing DNA](https://www.typingdna.com/) uses AI-based technology to authenticate users according to the way they type.
 
 You can integrate typingDNA with WSO2 Identity Server to provide risk-based adaptive authentication for users.
 
@@ -20,7 +20,7 @@ Consider a scenario where you want to prompt an additional authentication step i
 3. Create a typingDNA account. Learn how to create one [here](https://github.com/wso2-extensions/identity-conditional-auth-typingdna/blob/main/docs/files/Account%20Creation.pdf).
 
     !!! info
-        Once you sign up for a typingDNA account, go to the dashboard and under API settings, enable **Auto-enroll**,   and **Force initial enrollments**.
+        Once you sign up for a TypingDNA account, go to the dashboard and under API settings, enable **Auto-enroll**,   and **Force initial enrollments**.
 
 ## Set up TypingDNA in WSO2 IS
 
@@ -43,8 +43,8 @@ Follow the steps given below to set up typingDNA in the WSO2 IS server.
 6. Go to **Identity Providers -> Resident -> Other Settings -> TypingDNA Configuration** and make the following changes.
 
     - Enable TypingDNA
-    - Configure the typingDNA API key and API secret retrieved from the typingDNA [dashboard](https://www.typingdna.com/clients/).
-    - Enable Advance TypingDNA-API mode if you have a pro/enterprise typingDNA account.
+    - Configure the TypingDNA API key and API secret retrieved from the TypingDNA [dashboard](https://www.typingdna.com/clients/).
+    - Enable Advance TypingDNA-API mode if you have a pro/enterprise TypingDNA account.
     - Configure the region (eu or us).
 
     ![TypingDNA configuration]({{base_path}}/assets/img/samples/typingdna-configuration.png)
@@ -106,12 +106,12 @@ Follow the steps given below to configure TypingDNA in your application.
 2. Use the credentials of **Alex** and log in to the application two times.
     
     !!! info
-        You will be prompted for the second step on both occasions. TypingDNA requires two initial enrollments to register the user’s typing pattern. You can change the number of minimum initial enrollments required in the API settings of the [typingDNA dashboard](https://www.typingdna.com/clients/).
+        You will be prompted for the second step on both occasions. TypingDNA requires two initial enrollments to register the user’s typing pattern. You can change the number of minimum initial enrollments required in the API settings of the [TypingDNA dashboard](https://www.typingdna.com/clients/).
 
 3. Log in for the third time with Alex's credentials.
 
     !!! info
-        From this log in attempt and beyond, typingDNA will analyze your typing pattern against the registered typing pattern of the account. TOTP will only be prompted if your typing pattern does not match the typing pattern registered in Alex's account.
+        From this log in attempt and beyond, TypingDNA will analyze your typing pattern against the registered typing pattern of the account. TOTP will only be prompted if your typing pattern does not match the typing pattern registered in Alex's account.
 
 
 
